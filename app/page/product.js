@@ -26,7 +26,9 @@ export default function ProductSection() {
               <h3 className="text-xl font-semibold text-green-600 mb-2">{product.name}</h3>
               <p className="text-gray-600 mb-4">{product.description}</p>
               <p className="text-lg font-bold text-green-800">${product.price}</p>
-              <Button className="mt-4 bg-green-600 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-green-700 transition duration-300">
+              <Button 
+                type="submit"
+                className="mt-4 bg-green-600 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-green-700 transition duration-300">
                Add to Cart
               </Button>
             </div>
