@@ -1,3 +1,4 @@
+import { Button } from "@chakra-ui/react";
 import React from "react";
 
 export default function CTASection() {
@@ -13,12 +14,13 @@ export default function CTASection() {
             className="w-full px-4 py-3 rounded-full mb-4 text-gray-800"
             required
           />
-          {/* <button
+          <Button
             type="submit"
             className="bg-white text-green-600 px-8 py-3 rounded-full text-lg font-semibold hover:bg-green-100 transition duration-300"
+          
           >
             Get Started
-          </button> */}
+          </Button>
         </form>
       </div>
     </section>

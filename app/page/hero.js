@@ -1,6 +1,7 @@
 import React from "react"
 import Link from "next/link"
 import Image from "next/image"
+import HeroImage from "@/public/images/hero-section.png"
 
 export default function HeroSection() {
   return (
@@ -18,7 +19,7 @@ export default function HeroSection() {
           </Link>
         </div>
         <div className="md:w-1/2">
-          <Image src="/placeholder.svg" alt="Young Living Essential Oils" width={600} height={400} className="rounded-lg shadow-lg" />
+          <Image src={HeroImage} alt="Young Living Essential Oils" width={600} height={400} className="rounded-lg shadow-lg" />
         </div>
       </div>
     </section>

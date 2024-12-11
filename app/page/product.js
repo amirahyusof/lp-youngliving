@@ -1,13 +1,18 @@
 "use client"
+import { Button } from "@/components/ui/button"
 import Image from "next/image"
+import Lavender from "@/public/images/Lavender.png"
+import Peppermint from "@/public/images/Peppermint.png"
+import Lemon from "@/public/images/Lemon.png"
+import Frankincense from "@/public/images/Frank.png"
 
 
 export default function ProductSection() {
   const products = [
-    { name: 'Lavender', description: 'Calming and relaxing', price: 29.99 },
-    { name: 'Peppermint', description: 'Energizing and refreshing', price: 27.99 },
-    { name: 'Lemon', description: 'Uplifting and cleansing', price: 24.99 },
-    { name: 'Frankincense', description: 'Grounding and rejuvenating', price: 89.99 },
+    { name: 'Lavender', description: 'Calming and relaxing', price: 29.99, src: Lavender, alt: "Lavender Oil" },
+    { name: 'Peppermint', description: 'Energizing and refreshing', price: 27.99, src: Peppermint, alt: "Peppermint Oil" },
+    { name: 'Lemon', description: 'Uplifting and cleansing', price: 24.99, src: Lemon, alt: "Lemon Oil" },
+    { name: 'Frankincense', description: 'Grounding and rejuvenating', price: 89.99, src: Frankincense, alt: "Frankincense Oil" },
   ]
 
   return (
@@ -17,13 +22,13 @@ export default function ProductSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {products.map((product) => (
             <div key={product.name} className="bg-white p-6 rounded-lg shadow-md">
-              <Image src="/placeholder.svg" alt={product.name} width={200} height={200} className="mx-auto mb-4" />
+              <Image src={product.src} alt={product.alt} width={200} height={200} className="mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-green-600 mb-2">{product.name}</h3>
               <p className="text-gray-600 mb-4">{product.description}</p>
               <p className="text-lg font-bold text-green-800">${product.price}</p>
-              {/* <button className="mt-4 bg-green-600 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-green-700 transition duration-300">
-                Add to Cart
-              </button> */}
+              <Button className="mt-4 bg-green-600 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-green-700 transition duration-300">
+               Add to Cart
+              </Button>
             </div>
           ))}
         </div>
