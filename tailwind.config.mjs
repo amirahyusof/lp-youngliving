@@ -14,4 +14,7 @@ export default {
     },
   },
   plugins: [],
+  experimental: {
+    optimizeUniversalDefaults: ["@chakra-ui/react"]
+  }
 };
