@@ -1,12 +1,12 @@
 import React from "react"
 import Link from "next/link"
 import Image from "next/image"
-import HeroImage from "@/public/images/hero-section.png"
+import HeroImage from "@/public/images/hero-section.jpg"
 
 export default function HeroSection() {
   return (
     <section className="bg-green-50 py-20">
-      <div className="container mx-auto px-4 flex flex-col md:flex-row items-center">
+      <div className="container mx-auto px-4 flex flex-col md:flex-row items-center gap-10">
         <div className="md:w-1/2 mb-10 md:mb-0">
           <h1 className="text-4xl md:text-5xl font-bold text-green-800 mb-4">
             Transform Your Life with Young Living Essential Oils
@@ -19,7 +19,7 @@ export default function HeroSection() {
           </Link>
         </div>
         <div className="md:w-1/2">
-          <Image src={HeroImage} alt="Young Living Essential Oils" width={600} height={400} className="rounded-lg shadow-lg" />
+          <Image src={HeroImage} alt="Young Living Essential Oils" width={600} height={300} className="rounded-lg shadow-lg" />
         </div>
       </div>
     </section>
