@@ -15,10 +15,11 @@ import Frankincense from "@/public/images/Frank.png"
 
 export default function Home() {
   const [isClient, setIsClient] = useState(false)
-  const currentYear = new Date().getFullYear();
+  const [currentYear, setCurrentYear] = useState(null)
 
   useEffect(() => {
     setIsClient(true)
+    setCurrentYear(new Date().getFullYear())
   }, [])
 
   if(!isClient){
@@ -26,42 +27,42 @@ export default function Home() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
+    <div className="min-h-screen">
       {/* Navigation */}
-      <header className="bg-white shadow-sm">
+      <header className="bg-[#A8D5BA] shadow-sm">
         <nav className="container mx-auto px-4 py-3">
           <div className="flex items-center justify-between">
-            <Link href="/" className="text-2xl font-bold text-blue-600">
+            <Link href="/" className="text-2xl font-bold text-white">
               EssentialLife
             </Link>
             <div className="hidden md:flex space-x-6">
-              <Link href="/" className="text-blue-600 hover:text-blue-700">Home</Link>
-              <Link href="#products" className="text-gray-600 hover:text-blue-600">Products</Link>
-              <Link href="#about" className="text-gray-600 hover:text-blue-600">About</Link>
-              <Link href="#contact" className="text-gray-600 hover:text-blue-600">Contact</Link>
+              <Link href="#home" className="text-white hover:text-[#FFF4D2]">Home</Link>
+              <Link href="#products" className="text-white hover:text-[#FFF4D2]">Products</Link>
+              <Link href="#about" className="text-white hover:text-[#FFF4D2]">About</Link>
+              <Link href="#contact" className="text-white hover:text-[#FFF4D2]">Contact</Link>
             </div>
           </div>
         </nav>
       </header>
 
       {/* Hero Section */}
-      <section className="relative bg-blue-500 overflow-hidden">
+      <section id="home" className="relative bg-[#FFF4D2] overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-[url('/sunburst.svg')] opacity-20"></div>
         </div>
         <div className="container mx-auto px-4 py-16 relative">
           <div className="flex flex-col md:flex-row items-center">
             <div className="md:w-1/2 text-white space-y-6">
-              <div className="bg-white/20 backdrop-blur-sm rounded-full px-6 py-2 inline-block">
-                <span className="text-white">✨ Premium Essential Oils</span>
+              <div className="bg-yellow/20 backdrop-blur-sm rounded-full px-6 py-2 inline-block">
+                <span className="text-green-600">✨ Premium Essential Oils</span>
               </div>
-              <h1 className="text-4xl md:text-6xl font-bold">
+              <h1 className="text-4xl md:text-6xl font-bold text-[#A8D5BA]">
                 Transform Your Life with Natural Wellness
               </h1>
-              <p className="text-xl opacity-90">
+              <p className="text-xl opacity-90 text-gray-400">
                 Discover the power of pure essential oils for your daily wellness routine
               </p>
-              <Button className="bg-yellow-400 text-blue-900 hover:bg-yellow-300 text-lg px-8 py-6">
+              <Button className="bg-[#A8D5BA] text-white hover:bg-green-100 hover:text-black text-lg px-8 py-6">
                 Explore Collection
               </Button>
             </div>
@@ -85,7 +86,7 @@ export default function Home() {
       </section>
 
       {/* Search Section */}
-      <section className="py-8 bg-white">
+      <section id="" className="py-8 bg-white">
         <div className="container mx-auto px-4">
           <div className="relative max-w-2xl mx-auto">
             <Input
@@ -99,11 +100,11 @@ export default function Home() {
       </section>
 
       {/* Product Grid */}
-      <section className="py-12">
+      <section id="products" className="py-12 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {products.map((product) => (
-              <Card.Root key={product.name} className="group hover:shadow-xl transition-shadow duration-300">
+              <Card.Root key={product.name} className="bg-[#FFF4D2] group hover:shadow-xl transition-shadow duration-300">
                 <Card.Body className="p-4">
                   <div className="relative">
                     <Image
@@ -119,12 +120,12 @@ export default function Home() {
                       </span>
                     )}
                   </div>
-                  <h3 className="mt-4 text-xl font-semibold text-blue-900">{product.name}</h3>
+                  <h3 className="mt-4 text-xl font-semibold text-gray-900">{product.name}</h3>
                   <p className="text-gray-600 mt-2">{product.description}</p>
                   <div className="mt-4 flex items-center justify-between">
-                    <span className="text-2xl font-bold text-blue-600">${product.price}</span>
-                    <Button className="bg-blue-500 hover:bg-blue-600">
-                      Add to Cart
+                    <span className="text-2xl font-bold text-gray-500">${product.price}</span>
+                    <Button className="bg-[#A8D5BA] text-white p-2 hover:bg-green-100">
+                      View Detail
                     </Button>
                   </div>
                 </Card.Body>
@@ -135,9 +136,9 @@ export default function Home() {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-16 bg-blue-50">
+      <section id="about" className="py-16 bg-[#FFF4D2]">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center text-blue-900 mb-12">
+          <h2 className="text-3xl font-bold text-center text-[#A8D5BA] mb-12">
             Why Choose Young Living Essential Oils?
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -147,7 +148,7 @@ export default function Home() {
                   <div className="w-16 h-16 mx-auto mb-4 bg-blue-100 rounded-full flex items-center justify-center">
                     {benefit.icon}
                   </div>
-                  <h3 className="text-xl font-semibold text-blue-900 mb-4">{benefit.title}</h3>
+                  <h3 className="text-xl font-semibold text-green-900 mb-4">{benefit.title}</h3>
                   <p className="text-gray-600">{benefit.description}</p>
                 </Card.Body>
               </Card.Root>
@@ -157,60 +158,40 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-blue-600">
+      <section id='contact' className="py-16 bg-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold text-white mb-8">
+          <h2 className="text-3xl font-bold text-[#A8D5BA] mb-8">
             Start Your Wellness Journey Today
           </h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-green-900 mb-8 max-w-2xl mx-auto">
             Join thousands of satisfied customers who have transformed their lives with Young Living Essential Oils
           </p>
-          <Button className="bg-yellow-400 text-blue-900 hover:bg-yellow-300 text-lg px-8 py-6">
+          <Button className="bg-yellow-200 text-blue-900 hover:bg-yellow-300 text-lg px-8 py-6">
             Get Started Now
           </Button>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="bg-blue-900 text-white py-12">
+      <footer className="bg-[#A8D5BA] text-white py-12">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div>
+          <div className="grid grid-cols-1 md:grid-cols-2">
+            <div className='justify-items-start'>
               <h3 className="text-lg font-semibold mb-4">About Us</h3>
-              <p className="text-blue-200">
+              <p className='text-[#FFF4D2]'>
                 Premium essential oils for your wellness journey.
               </p>
             </div>
-            <div>
-              <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
-              <ul className="space-y-2">
-                <li><Link href="#" className="text-blue-200 hover:text-white">Products</Link></li>
-                <li><Link href="#" className="text-blue-200 hover:text-white">About</Link></li>
-                <li><Link href="#" className="text-blue-200 hover:text-white">Contact</Link></li>
-              </ul>
-            </div>
-            <div>
+      
+            <div className='justify-items-end'>
               <h3 className="text-lg font-semibold mb-4">Contact</h3>
               <ul className="space-y-2">
-                <li className="text-blue-200">Email: info@essentiallife.com</li>
-                <li className="text-blue-200">Phone: (555) 123-4567</li>
+                <li className="text-white">Email: info@essentiallife.com</li>
+                <li className="text-white">Phone: (555) 123-4567</li>
               </ul>
             </div>
-            <div>
-              <h3 className="text-lg font-semibold mb-4">Newsletter</h3>
-              <form className="space-y-2">
-                <Input
-                  type="email"
-                  placeholder="Enter your email"
-                  className="w-full bg-blue-800 border-blue-700 text-white placeholder-blue-400"
-                />
-                <Button className="w-full bg-yellow-400 text-blue-900 hover:bg-yellow-300">
-                  Subscribe
-                </Button>
-              </form>
-            </div>
           </div>
-          <div className="mt-8 pt-8 border-t border-blue-800 text-center text-blue-200">
+          <div className="mt-8 pt-8 border-t border-white text-center text-white">
             <p>© {currentYear} EssentialLife. All rights reserved.</p>
           </div>
         </div>
