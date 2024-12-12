@@ -143,7 +143,7 @@ export default function Home() {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
-              <Card.Root key={index} className="text-center hover:shadow-lg transition-shadow duration-300">
+              <Card.Root key={index} className="text-center bg-white hover:shadow-lg transition-shadow duration-300">
                 <Card.Body className="p-6">
                   <div className="w-16 h-16 mx-auto mb-4 bg-blue-100 rounded-full flex items-center justify-center">
                     {benefit.icon}
