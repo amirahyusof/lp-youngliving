@@ -17,12 +17,14 @@ export default function CTASection() {
             required
           />
 
-          <Button
-            type="submit"
-            className="bg-white text-green-600 px-8 py-3 rounded-full text-lg font-semibold hover:bg-green-100 transition duration-300"
-          >
-            Get Started
-          </Button>
+          <div>
+            <Button
+              type="button"
+              className="bg-white text-green-600 px-8 py-3 rounded-full text-lg font-semibold hover:bg-green-100 transition duration-300"
+            >
+              Get Started
+            </Button>
+          </div>
         </form>
       </div>
     </section>

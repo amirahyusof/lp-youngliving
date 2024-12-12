@@ -1,41 +1,26 @@
-
-import Link from 'next/link'
+import { Button } from '@/components/ui/button'
 import React from 'react'
-import HeroSection from './page/hero'
-import AboutSection from './page/about'
-import ProductSection from './page/product'
-import TestimonialSection from './page/testimonial'
-import CTASection from './page/cta'
+import Link from 'next/link'
 
-
-export default function Home() {
+export default function MainPage(){
   return (
     <div className="flex flex-col min-h-screen">
-      <header className="bg-white shadow-sm">
-        <nav className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <Link href="/" className="text-2xl font-bold text-green-600">EssentialLife</Link>
-          <ul className="flex space-x-4">
-            <li><Link href="#about" className="text-gray-600 hover:text-green-600">About</Link></li>
-            <li><Link href="#products" className="text-gray-600 hover:text-green-600">Products</Link></li>
-            <li><Link href="#testimonials" className="text-gray-600 hover:text-green-600">Testimonials</Link></li>
-            <li><Link href="#contact" className="text-gray-600 hover:text-green-600">Contact</Link></li>
-          </ul>
-        </nav>
-      </header>
-
-      <main>
-        <HeroSection />
-        <AboutSection />
-        <ProductSection />
-        <TestimonialSection />
-        <CTASection />
-      </main>
-
-      <footer className="bg-gray-100 mt-auto">
-        <div className="container mx-auto px-4 py-8">
-          <p className="text-center text-gray-600">© 2024 EssentialLife. All rights reserved.</p>
-        </div>
-      </footer>
+      <h1>Click the Page below</h1>
+      <div className="container mx-auto px-4 py-4 flex justify-between items-center">
+        <ul>
+          <li className="flex space-x-4">
+            <Link href="/version1">
+              <Button>Landing Page Version 1</Button>
+            </Link>
+          </li>
+          <li>
+            <Link href="/version2">
+              <Button>Landing Page Version 2</Button>
+            </Link>
+          </li>
+        </ul>
+      </div>
     </div>
   )
 }
+
