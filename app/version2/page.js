@@ -36,10 +36,10 @@ export default function Home() {
               EssentialLife
             </Link>
             <div className="hidden md:flex space-x-6">
-              <Link href="#home" className="text-white hover:text-[#FFF4D2]">Home</Link>
-              <Link href="#products" className="text-white hover:text-[#FFF4D2]">Products</Link>
-              <Link href="#about" className="text-white hover:text-[#FFF4D2]">About</Link>
-              <Link href="#contact" className="text-white hover:text-[#FFF4D2]">Contact</Link>
+              <Link href="#home" className="text-white hover:text-[#FFF4D2]">Utama</Link>
+              <Link href="#products" className="text-white hover:text-[#FFF4D2]">Produk</Link>
+              <Link href="#about" className="text-white hover:text-[#FFF4D2]">Tentang Kami</Link>
+              <Link href="#contact" className="text-white hover:text-[#FFF4D2]">Hubungi Kami</Link>
             </div>
           </div>
         </nav>
@@ -53,7 +53,7 @@ export default function Home() {
         <div className="container mx-auto px-4 py-16 relative">
           <div className="flex flex-col md:flex-row items-center">
             <div className="md:w-1/2 text-white space-y-6">
-              <div className="bg-yellow/20 backdrop-blur-sm rounded-full px-6 py-2 inline-block">
+              <div className="bg-white/70 backdrop-blur-sm rounded-full px-6 py-2 inline-block">
                 <span className="text-green-600">✨ Premium Essential Oils</span>
               </div>
               <h1 className="text-4xl md:text-6xl font-bold text-[#A8D5BA]">
@@ -102,7 +102,7 @@ export default function Home() {
       {/* Product Grid */}
       <section id="products" className="py-12 bg-white">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {products.map((product) => (
               <Card.Root key={product.name} className="bg-[#FFF4D2] group hover:shadow-xl transition-shadow duration-300">
                 <Card.Body className="p-4">
@@ -125,7 +125,9 @@ export default function Home() {
                   <div className="mt-4 flex items-center justify-between">
                     <span className="text-2xl font-bold text-gray-500">${product.price}</span>
                     <Button className="bg-[#A8D5BA] text-white p-2 hover:bg-green-100">
-                      View Detail
+                      <Link href={product.link || "#"}>
+                        View Detail
+                      </Link>
                     </Button>
                   </div>
                 </Card.Body>
@@ -202,33 +204,49 @@ export default function Home() {
 
 const products = [
   {
-    name: "Lavender Essential Oil",
-    description: "Calming and relaxing blend for peaceful sleep",
+    name: "Minyak Habbatus Sauda",
+    description: "Dikenali sebagai 'ubat segala penyakit', menyokong sistem imun dan kesihatan tubuh secara menyeluruh.",
+    price: 29.99,
+    image: "/placeholder.svg",
+    badge: "Baru",
+    link: "/version2/black-seed-oil"
+  },
+  {
+    name: "Minyak Esensial Lavender",
+    description: "Campuran yang menenangkan untuk tidur yang damai",
     price: 29.99,
     image: Lavender,
-    badge: "Best Seller"
+    badge: "Paling Laris"
   },
   {
     name: "Peppermint Vitality",
-    description: "Refreshing oil for energy and focus",
+    description: "Minyak yang menyegarkan untuk tenaga dan fokus",
     price: 27.99,
     image: Peppermint,
-    badge: "New"
+    badge: "Baru"
   },
   {
-    name: "Lemon Essential Oil",
-    description: "Uplifting citrus for natural cleaning",
+    name: "Minyak Esensial Lemon",
+    description: "Citrus yang menyegarkan untuk pembersihan semula jadi",
     price: 24.99,
     image: Lemon
   },
   {
     name: "Frankincense",
-    description: "Ancient oil for spiritual wellness",
+    description: "Minyak kuno untuk kesejahteraan spiritual",
     price: 89.99,
     image: Frankincense,
     badge: "Premium"
+  },
+  {
+    name: "Minyak Esensial Tea Tree",
+    description: "Minyak serbaguna yang menyokong kesihatan kulit dan pembersihan semula jadi.",
+    price: 34.99,
+    image: "/placeholder.svg",
+    badge: "Popular"
   }
-]
+];
+
 
 const benefits = [
   {
