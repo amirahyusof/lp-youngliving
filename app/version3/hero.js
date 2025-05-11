@@ -26,7 +26,7 @@ export default function HeroSection(){
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
                 size="lg" 
-                className="bg-emerald-600 hover:bg-emerald-700 gap-2 w-40"
+                className="bg-[#26643F] hover:bg-emerald-700 gap-2 w-40"
                 onClick={() => window.open("https://wa.me/1234567890?text=I'm%20interested%20in%20learning%20more%20about%20Young%20Living%20Essential%20Oils", "_blank")}
               >
                 Contact Me

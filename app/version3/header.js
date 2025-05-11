@@ -39,7 +39,7 @@ export default function HeaderSection(){
           </nav>
 
           <div className="hidden md:flex items-center">
-            <Button className="bg-emerald-600 hover:bg-emerald-700 w-32">
+            <Button className="bg-[#26643F] hover:bg-emerald-700 w-32">
               Contact Me
             </Button>
           </div>
@@ -73,7 +73,7 @@ export default function HeaderSection(){
                   
                 </div>
                 <div className="flex items-center mt-8">
-                  <Button className="bg-emerald-600 text-white hover:bg-emerald-700 w-32">
+                  <Button className="bg-emerald-500 text-white hover:bg-emerald-700 w-32">
                     Contact Me
                   </Button>
                 </div>

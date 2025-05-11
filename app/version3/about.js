@@ -41,7 +41,7 @@ export default function AboutSection(){
                 </p>
                 
                 <Button 
-                  className="mt-6 bg-emerald-600 hover:bg-emerald-700 p-2"
+                  className="mt-6 bg-[#26643F] hover:bg-emerald-700 p-2"
                   onClick={() => window.open("https://wa.me/1234567890?text=I'd%20like%20to%20learn%20more%20about%20your%20Young%20Living%20journey", "_blank")}
                 >
                   <FaWhatsapp className="text-white" />
