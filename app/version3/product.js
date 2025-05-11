@@ -18,7 +18,7 @@ export default function ProductSection(){
         </div>
 
         {/* Carousel */}
-        <div className="relative max-w-5xl mx-auto px-4">
+        <div className="relative max-w-5xl lg:max-w-6xl mx-auto px-4">
           <div className="overflow-hidden">
             <div className="flex transition-transform duration-500 ease-in-out transform translate-x-0 gap-6">
               {/* Product 1 */}

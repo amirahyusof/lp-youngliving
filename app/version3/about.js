@@ -21,7 +21,7 @@ export default function AboutSection(){
               <div className="w-full md:w-1/3">
                 <div className="relative w-48 h-48 mx-auto rounded-full overflow-hidden">
                   <Image 
-                    src="/consultant-photo.png" 
+                    src="/placeholder.jpg" 
                     alt="Young Living Consultant" 
                     fill 
                     className="object-cover border-2 border-emerald-600 rounded-full"

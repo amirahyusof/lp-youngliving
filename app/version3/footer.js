@@ -21,13 +21,13 @@ export default function FooterSection(){
               Your personal source for premium Young Living essential oils. Pure, potent, and transformative.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-slate-400 hover:text-white">
+              <a href="#" className="text-emerald-600 hover:text-slate-600">
                 <FaFacebook size={30} />
               </a>
-              <a href="#" className="text-slate-400 hover:text-white">
+              <a href="#" className="text-emerald-600 hover:text-slate-600">
                 <FaInstagram size={30} />
               </a>
-              <a href="#" className="text-slate-400 hover:text-white">
+              <a href="#" className="text-emerald-600 hover:text-slate-600">
                 <FaThreads size={30} />
               </a>
             </div>

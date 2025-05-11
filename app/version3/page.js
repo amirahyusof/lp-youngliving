@@ -6,7 +6,7 @@ import AboutSection from './about'
 import Header from './header'
 import Footer from './footer'
 
-export default function mainpage(){
+export default function Version3Page(){
   return (
     <div className='flex flex-col min-h-screen items-center'>
       <Header />
