@@ -22,6 +22,13 @@ export default function MainPage(){
             </Link>
           </Button>
           </li>
+          <li>
+          <Button className="bg-[#FF9494] text-white hover:bg-[#FFD1D1] text-lg px-8 py-6">
+            <Link href="/version3">
+              Landing Page Version 3
+            </Link>
+          </Button>
+          </li>
         </ul>
       </div>
     </div>
